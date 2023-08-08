@@ -74,16 +74,16 @@ function drawLandmarks(detections){
 
 function drawExpressions(detections, x, y, textYSpace){
   if(detections.length > 0){//If at least 1 face is detected
-    let {neutral, happy, angry, sad, disgusted, surprised, fearful} = detections[0].expressions;
+    let {neutral, happy, angry, sad, surprised} = detections[0].expressions;
     textSize(14);
     noStroke();
     fill(44, 169, 225);
-
-    text("neutral:       " + nf(neutral*100, 0,0)+"%", x, y);
-    text("happiness:   " + nf(happy*100, 0,0)+"%", x, y+textYSpace);
-    text("anger:         " + nf(angry*100, 0,0)+"%", x, y+textYSpace*2);
-    text("sad:            "+ nf(sad*100,  0,0)+"%", x, y+textYSpace*3);
-    text("surprised:     " + nf(surprised*100, 0,0)+"%", x, y+textYSpace*4);
+    
+    text("neutral:       " + nf(neutral*100, 0,0)+"%", x+textYSpace*15, textYSpace*5);
+    text("happiness:   " + nf(happy*100, 0,0)+"%", x+textYSpace*15, textYSpace*6);
+    text("anger:         " + nf(angry*100, 0,0)+"%", x+textYSpace*15, textYSpace*7);
+    text("sad:            "+ nf(sad*100,  0,0)+"%", x+textYSpace*15, textYSpace*8);
+    text("surprised:     " + nf(surprised*100, 0,0)+"%", x+textYSpace*15, textYSpace*9);
   }else{//If no faces is detected: 顔が1つも検知されていなかったら
     text("neutral: ", x, y);
     text("happiness: ", x, y + textYSpace);
