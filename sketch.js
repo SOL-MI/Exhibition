@@ -79,17 +79,17 @@ function drawExpressions(detections, x, y, textYSpace){
     noStroke();
     fill(44, 169, 225);
     
-    text("neutral:       " + nf(neutral*100, 0,0)+"%", x+textYSpace*15, textYSpace*5);
-    text("happiness:   " + nf(happy*100, 0,0)+"%", x+textYSpace*15, textYSpace*6);
-    text("anger:         " + nf(angry*100, 0,0)+"%", x+textYSpace*15, textYSpace*7);
-    text("sad:            "+ nf(sad*100,  0,0)+"%", x+textYSpace*15, textYSpace*8);
-    text("surprised:     " + nf(surprised*100, 0,0)+"%", x+textYSpace*15, textYSpace*9);
+    text("neutral:       " + nf(neutral*100, 0,0)+"%", x+textYSpace*5, textYSpace*5);
+    text("happiness:   " + nf(happy*100, 0,0)+"%", x+textYSpace*5, textYSpace*6);
+    text("anger:         " + nf(angry*100, 0,0)+"%", x+textYSpace*5, textYSpace*7);
+    text("sad:            "+ nf(sad*100,  0,0)+"%", x+textYSpace*5, textYSpace*8);
+    text("surprised:     " + nf(surprised*100, 0,0)+"%", x+textYSpace*5, textYSpace*9);
   }else{//If no faces is detected: 顔が1つも検知されていなかったら
-    text("neutral: ", x, y);
-    text("happiness: ", x, y + textYSpace);
-    text("anger: ", x, y + textYSpace*2);
-    text("sad: ", x, y + textYSpace*3);
-    text("surprised: ", x, y + textYSpace*4);
+    text("neutral: ",  x+textYSpace*5, textYSpace*5);
+    text("happiness: ",x+textYSpace*5, textYSpace*6);
+    text("anger: ", x+textYSpace*5, textYSpace*7);
+    text("sad: ", x+textYSpace*5, textYSpace*8);
+    text("surprised: ",  x+textYSpace*5, textYSpace*9);
   }
 }
 // function draw(){
